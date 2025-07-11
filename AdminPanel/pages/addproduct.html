@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Product</title>
+    <link rel="stylesheet" href="../css/addproduct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../assets/logo/Vector.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-logo-link"> <img src="../assets/logo/Vector.svg" alt="Admin Logo" class="sidebar-logo-img"> <h2 class="sidebar-logo-text">Admin</h2> </a>
+            </div>
+            <nav class="sidebar-nav">
+                 <ul>
+                    <li><a href="dashboard.html"><span class="icon"><i class="fas fa-tachometer-alt"></i></span> Dashboard</a></li>
+                    <li class="active"><a href="products.html"><span class="icon"><i class="fas fa-box-open"></i></span> Products</a></li>
+                    <li><a href="orders.html"><span class="icon"><i class="fas fa-shopping-cart"></i></span> Orders</a></li>
+                    <li><a href="customers.html"><span class="icon"><i class="fas fa-users"></i></span> Customers</a></li>
+                    </ul>
+            </nav>
+             </aside>
+
+        <main class="content-area">
+            <header class="top-bar">
+                <div class="breadcrumbs">
+                    Admin &gt; Add Product </div>
+                <div class="user-profile">
+                     <a href="../index.html" aria-label="Log out">
+                         <i class="fas fa-sign-out-alt logout-icon"></i>
+                     </a>
+                </div>
+            </header>
+
+            <section class="add-product-section">
+                <h1>Add Product</h1>
+
+                <form class="add-product-form">
+                    <div class="form-columns">
+                        <div class="form-column-left">
+                            <div class="form-group">
+                                <label for="product-title">Title</label>
+                                <input type="text" id="product-title" name="product_title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-price">Price</label>
+                                <input type="number" id="product-price" name="product_price" step="0.01" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-category">Category</label>
+                                <input type="text" id="product-category" name="product_category">
+                            </div>
+                            <div class="form-group">
+                                <label for="product-slug">Slug</label>
+                                <input type="text" id="product-slug" name="product_slug">
+                            </div>
+                             <div class="form-group">
+                                <label for="product-sku">SKU</label>
+                                <input type="text" id="product-sku" name="product_sku">
+                            </div>
+                            <div class="form-group">
+                                <label for="product-description">Description</label>
+                                <textarea id="product-description" name="product_description" rows="6"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-column-right">
+                            <div class="form-group">
+                                <label for="stock-status">Stock status</label>
+                                <input type="text" id="stock-status" name="stock_status">
+                                </div>
+                             <div class="form-group">
+                                <label for="available-quantity">Available quantity</label>
+                                <input type="number" id="available-quantity" name="available_quantity" min="0" required>
+                            </div>
+                             <div class="form-group">
+                                <label for="product-images">Images</label>
+                                <div class="image-upload-area">
+                                     <i class="fas fa-cloud-upload-alt"></i> Choose product images
+                                     <input type="file" id="product-images" name="product_images[]" multiple accept="image/*" class="visually-hidden">
+                                </div>
+                                <div class="image-previews">
+                                    <img src="../assets/images/neutrals.png" alt="Preview 1">
+                                    <img src="../assets/images/Screenshot1.png" alt="Preview 2">
+                                    <img src="../assets/images/Screenshot 2.png" alt="Preview 3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Colors</label>
+                                <div class="color-swatches">
+                                    <span class="color-swatch" style="background-color: #333;" title="Black"></span>
+                                    <span class="color-swatch" style="background-color: #eee;" title="Light Grey"></span>
+                                    <span class="color-swatch" style="background-color: #ffcc00;" title="Yellow"></span>
+                                    <span class="color-swatch" style="background-color: #007bff;" title="Blue"></span>
+                                    </div>
+                            </div>
+                             <div class="form-group">
+                                <label>Sizes</label>
+                                <div class="size-selector">
+                                    <button type="button" class="size-btn">S</button>
+                                    <button type="button" class="size-btn active">M</button> <button type="button" class="size-btn">L</button>
+                                    <button type="button" class="size-btn">XL</button>
+                                    <button type="button" class="size-btn">XXL</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-product-btn">Save Product</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+    <script src="../js/addproduct.js"></script>
+</body>
+</html>

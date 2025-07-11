@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Customers</title>
+    <link rel="stylesheet" href="../css/customers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../assets/logo/Vector.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+             <div class="sidebar-header">
+                <a href="../index.html" class="sidebar-logo-link"> <img src="../assets/logo/Vector.svg" alt="Admin Logo" class="sidebar-logo-img"> <h2 class="sidebar-logo-text">Admin</h2> </a>
+            </div>
+            <nav class="sidebar-nav">
+                 <ul>
+                    <li><a href="dashboard.html"><span class="icon"><i class="fas fa-tachometer-alt"></i></span> Dashboard</a></li>
+                    <li><a href="products.html"><span class="icon"><i class="fas fa-box-open"></i></span> Products</a></li>
+                    <li><a href="orders.html"><span class="icon"><i class="fas fa-shopping-cart"></i></span> Orders</a></li>
+                    <li class="active"><a href="customers.html"><span class="icon"><i class="fas fa-users"></i></span> Customers</a></li>
+                </ul>
+            </nav>
+            
+        </aside>
+
+        <main class="content-area">
+            <header class="top-bar">
+                <div class="breadcrumbs">
+                    Admin &gt; Customers
+                </div>
+                <div class="user-profile">
+                     <a href="../index.html" aria-label="Log out">
+                         <i class="fas fa-sign-out-alt logout-icon"></i>
+                     </a>
+                </div>
+            </header>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <h1>Customers</h1>
+                    <div class="header-actions">
+                        
+                        <div class="search-container">
+                             <input type="search" placeholder="Search customers">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th class="col-thumb"></th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Shipping Address</th>
+                                <th class="col-action">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Customers will be dynamically loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                <nav class="pagination">
+                   <ul>
+                        <li><a href="" class="page-number active">1</a></li>
+                        <li><a href="" class="page-number">2</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+        </main>
+    </div>
+    <script src="../js/customers.js"></script>
+</body>
+</html>

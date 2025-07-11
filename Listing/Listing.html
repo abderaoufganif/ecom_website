@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxStore</title>
+    <link rel="stylesheet" href="../../assets/style/main.css">
+    <link rel="stylesheet" href="Listing.css">
+    <link rel="icon" href="../../assets/img/Logomark.svg" type="image/x-icon">
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+          <p>Get 25% OFF on your first order. <a href="Listing.html">Order Now</a></p>
+      </div>
+  </div>
+      <header class="main-header">
+        <div class="container">
+            <div class="sidebar-header">
+                <a href="../Homepage/index.html" class="sidebar-logo-link">
+                    <img src="../../assets/img/Logomark.svg" alt="Admin Logo" class="sidebar-logo-img">
+                    <h2 class="sidebar-logo-text">LuxStore</h2>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../Homepage/index.html">Home</a></li>      
+                    <div class="dropdown">
+                        <li><a href="Listing.html">Categories </a></li>
+                            <div class="dropdown-content">
+                                <a href="Listing.html">Perfumes</a>
+                                <a href="Listing.html">Trousers</a>
+                                <a href="Listing.html">T-shirts</a>
+                                <a href="Listing.html">Hats</a>
+                                <a href="Listing.html">Thermos</a>
+                            </div>
+                    </div>   
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <form class="search-form" style="position: relative;">
+                    <input type="search" placeholder="Search products">
+                    </form>
+                <div class="header-icons">
+                    <a href="../cart/cart.html" aria-label="Shopping Cart" class="cart-icon" >
+                        <img src="../../assets/img/Icon.svg" alt="">
+                        <span class="cart-count" id="cart-count" >0</span>
+                    </a>
+                    <a href="../login_singup_forget/login.html" aria-label="User Account" class="user-icon">
+                        <img src="../../assets/img/User.svg" alt="User" class="user-image">
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </header>
+      <main class="main-container">
+        <div id="notification" class="notification">
+            <span id="notification-message"></span>
+            <button id="close-notification" class="close-notification">X</button>
+          </div>
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <div><input type="checkbox" id="perfume"> <label for="perfume">Perfume</label></div>
+                <div><input type="checkbox" id="trousers"> <label for="trousers">Trousers</label></div>
+                <div><input type="checkbox" id="shoe"> <label for="t-shirts">T-shirts</label></div>
+                <div><input type="checkbox" id="hat"> <label for="hat">Hat</label></div>
+                <div><input type="checkbox" id="thermos"> <label for="thermos">Thermos</label></div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Color</h3>
+                <div class="colors">
+                    <span class="color blue"></span>
+                    <span class="color yellow"></span>
+                    <span class="color green"></span>
+                    <span class="color black"></span>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Size</h3>
+                <div class="sizes">
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                    <button>XXL</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price</h3>
+                <input type="range" min="10" max="9000" step="10">
+            </div>
+        </aside>
+        <section class="product-list-container">
+            <p class="results-count"></p>
+            <div class="product-list">
+                <div class="product">
+                    <div class="product-list" id="dynamicProducts"></div>
+                </div>
+            </div>
+            <div class="pagination" id="paginationControls"></div>
+
+
+        </section>
+    </main>
+    
+    <div class="newsletter">
+      <h2 class="newsletter-title">Join Our Newsletter</h2>
+      <p class="newsletter-description">We love to surprise our subscribers with occasional gifts.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" class="newsletter-input" />
+        <button type="submit" class="newsletter-button">Subscribe</button>
+      </form>
+    </div>
+<footer class="main-footer">
+  <div class="container footer-grid">
+      <div class="footer-col about-col">
+          <div style="display: flex; align-items: center;">
+              <img src="../../assets/img/Logomark0.1.svg" alt="Logo" style="width: 35px; height: auto; margin-right: 10px;">
+              <h3 class="logo">LuxStore</h3>
+          </div>
+
+          <div class="social-icons">
+              <p>Follow us on our social medias</p>
+              <a href="#" aria-label="Facebook"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/facebook.svg" alt="GitHub"></a>
+              <a href="#" aria-label="Instagram"><img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.0.1/instagram.svg" alt="Instagram"></a>
+            
+          </div>
+      </div>
+      <div class="footer-col links-col">
+          <h4>SUPPORT</h4>
+          <ul>
+                                  <li><a href="../contact.html">FAQ</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h4>COMPANY</h4>
+                <ul>
+                  <li><a href="../about.html">About us</a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+              
+          </ul>
+      </div>
+      <div class="footer-col links-col">
+          <h4>SHOP</h4>
+          <ul>
+                              <li><a href="../login_singup_forget/login.html">My Account</a></li>
+                <li><a href="../checkout/checkout.html">Checkout</a></li>
+                <li><a href="../cart/cart.html">Cart</a></li>
+          </ul>
+      </div>
+       <div class="footer-col payments-col">
+          <h4>ACCEPTED PAYMENTS</h4>
+          <div class="payment-icons">
+              <img src="../../assets/img/algpost.png" >
+              <img src="../../assets/img/cib.png">
+              </div>
+      </div>
+  </div>
+</footer>
+
+<div class="sub-footer">
+  <div class="container">
+      <p>&copy; 2025 . Developed by Ganif, Bachene, Gharbi.</p>
+  </div>
+</div>
+<script src="list.js"></script>
+</body>
+</html>
